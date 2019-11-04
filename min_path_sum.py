@@ -4,7 +4,7 @@ import unittest
 
 
 class Solution:
-    def my_func(self, grid: List[List[int]]) -> int:
+    def min_cost_tickets(self, grid: List[List[int]]) -> int:
         # dp[row][col] = min(dp[row-1][col], dp[row][col-1]) + grid[row][col]
         # initalize dp
         dp = [[sys.maxsize for j in range(len(grid[0]))]
@@ -38,12 +38,12 @@ class MyTest(unittest.TestCase):
         self.assertTrue(True)
 
     def test_equal(self):
-        self.assertEqual(s.my_func(m), 7)
+        self.assertEqual(s.min_cost_tickets(m), 7)
 
 
 def main():
     print("---- RUNNING MAIN ----")
-    print(s.my_func(m))
+    print(s.min_cost_tickets(m))
     print("---- DONE MAIN ----\n\n")
 
 
